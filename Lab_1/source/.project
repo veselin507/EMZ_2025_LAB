@@ -3,6 +3,7 @@
 	<name>lab1</name>
 	<comment></comment>
 	<projects>
+		<project>project 1 group 69b</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
