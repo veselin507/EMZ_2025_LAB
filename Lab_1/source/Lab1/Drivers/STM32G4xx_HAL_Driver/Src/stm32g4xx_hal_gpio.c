@@ -104,7 +104,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32g4xx_hal.h"
-
+#include "main.h"
 /** @addtogroup STM32G4xx_HAL_Driver
   * @{
   */
@@ -504,7 +504,12 @@ void HAL_GPIO_EXTI_IRQHandler(uint16_t GPIO_Pin)
   */
 __weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-  /* Prevent unused argument(s) compilation warning */
+ if(GPIO_Pin==B1_Pin)
+ {
+	 BspButtonState==BUTTON_PRESSED;
+
+ }
+	/* Prevent unused argument(s) compilation warning */
   UNUSED(GPIO_Pin);
 
   /* NOTE: This function should not be modified, when the callback is needed,
