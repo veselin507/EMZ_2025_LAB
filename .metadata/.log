@@ -1,0 +1,21 @@
+!SESSION 2025-10-22 11:07:11.485 -----------------------------------------------
+eclipse.buildId=Version 1.16.1
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\students\Desktop\Veselin-hristiyan-69b
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-22 11:07:17.679
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-22 11:07:17.689
+!MESSAGE Log4j2 initialized with config file C:\Users\students\Desktop\Veselin-hristiyan-69b\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-22 11:07:20.764
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-10-22 11:07:55.092
+!MESSAGE Indexed 'lab1' (26 sources, 120 headers) in 5.98 sec: 11,644 declarations; 48,449 references; 3 unresolved inclusions; 46 syntax errors; 171 unresolved names (0.28%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-10-22 11:08:34.429
+!MESSAGE Indexed 'Lab1' (26 sources, 120 headers) in 3.11 sec: 11,646 declarations; 48,491 references; 3 unresolved inclusions; 46 syntax errors; 171 unresolved names (0.28%)

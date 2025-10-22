@@ -93,46 +93,41 @@ int main(void)
 
   /* USER CODE END 2 */
 
-  /* Initialize led */
-  BSP_LED_Init(LED_GREEN);
 
-  /* Initialize USER push-button, will be used to trigger an interrupt each time it's pressed.*/
-  BSP_PB_Init(BUTTON_USER, BUTTON_MODE_EXTI);
-
-  /* Initialize COM1 port (115200, 8 bits (7-bit data + 1 stop bit), no parity */
-  BspCOMInit.BaudRate   = 115200;
-  BspCOMInit.WordLength = COM_WORDLENGTH_8B;
-  BspCOMInit.StopBits   = COM_STOPBITS_1;
-  BspCOMInit.Parity     = COM_PARITY_NONE;
-  BspCOMInit.HwFlowCtl  = COM_HWCONTROL_NONE;
-  if (BSP_COM_Init(COM1, &BspCOMInit) != BSP_ERROR_NONE)
-  {
-    Error_Handler();
-  }
 
   /* USER CODE BEGIN BSP */
 
-  /* -- Sample board code to send message over COM1 port ---- */
-  printf("Welcome to STM32 world !\n\r");
 
-  /* -- Sample board code to switch on led ---- */
-  BSP_LED_On(LED_GREEN);
 
   /* USER CODE END BSP */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  int buttonstate=0;
   while (1)
   {
-
+	  buttonstate =HAL_GPIO_ReadPin(user_button_GPIO_Port, user_button_Pin);
     /* -- Sample board code for User push-button in interrupt mode ---- */
-    if (BspButtonState == BUTTON_PRESSED)
+    if (buttonstate == BUTTON_PRESSED)
+
     {
       /* Update button state */
       BspButtonState = BUTTON_RELEASED;
       /* -- Sample board code to toggle led ---- */
-  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+	  HAL_Delay(550);
+	  HAL_GPIO_WritePin(green_led_GPIO_Port, green_led_Pin,1);
+	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8,1);
+	  HAL_Delay(550);
+	  HAL_GPIO_WritePin(green_led_GPIO_Port, green_led_Pin,0);
+	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8,0);
+
       /* ..... Perform your action ..... */
+    }
+    else
+    {
+    	  HAL_GPIO_WritePin(green_led_GPIO_Port, green_led_Pin,0);
+    	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8,0);
+
     }
     /* USER CODE END WHILE */
 
@@ -205,20 +200,30 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(green_led_GPIO_Port, green_led_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : B1_Pin */
-  GPIO_InitStruct.Pin = B1_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : user_button_Pin */
+  GPIO_InitStruct.Pin = user_button_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(user_button_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : LD2_Pin */
-  GPIO_InitStruct.Pin = LD2_Pin;
+  /*Configure GPIO pin : green_led_Pin */
+  GPIO_InitStruct.Pin = green_led_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(green_led_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PC8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
