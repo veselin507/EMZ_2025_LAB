@@ -3295,7 +3295,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 161.29) (xy 127 161.29)
+			(xy 27.94 168.91) (xy 127 168.91)
 		)
 		(stroke
 			(width 0)
@@ -3535,7 +3535,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 78.74) (xy 27.94 161.29)
+			(xy 27.94 78.74) (xy 27.94 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4450,7 +4450,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:NMOS")
-		(at 132.08 161.29 0)
+		(at 132.08 168.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4459,7 +4459,7 @@
 		(fields_autoplaced yes)
 		(uuid "4f6842b8-23f0-494d-b66b-224328056ded")
 		(property "Reference" "Q1"
-			(at 138.43 160.0199 0)
+			(at 138.43 167.6399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4468,7 +4468,7 @@
 			)
 		)
 		(property "Value" "IRL2505PBF"
-			(at 138.43 162.5599 0)
+			(at 138.43 170.1799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4477,7 +4477,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 137.16 158.75 0)
+			(at 137.16 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4486,7 +4486,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 132.08 173.99 0)
+			(at 132.08 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4495,7 +4495,7 @@
 			)
 		)
 		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 132.08 161.29 0)
+			(at 132.08 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4504,7 +4504,7 @@
 			)
 		)
 		(property "Sim.Device" "NMOS"
-			(at 132.08 178.435 0)
+			(at 132.08 186.055 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4513,7 +4513,7 @@
 			)
 		)
 		(property "Sim.Type" "VDMOS"
-			(at 132.08 180.34 0)
+			(at 132.08 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4522,7 +4522,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 132.08 176.53 0)
+			(at 132.08 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4543,72 +4543,6 @@
 			(project ""
 				(path "/43583bed-eccb-4d2c-8df6-db17525cdd0e"
 					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 134.62 173.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4fe5efa2-bc0e-4775-a453-6408fd43b434")
-		(property "Reference" "#PWR05"
-			(at 134.62 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 134.62 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 134.62 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 134.62 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 134.62 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "27896338-4c07-4fe2-aa3f-c076e1e5f7fe")
-		)
-		(instances
-			(project ""
-				(path "/43583bed-eccb-4d2c-8df6-db17525cdd0e"
-					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -4750,86 +4684,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 134.62 170.18 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7eb68abf-8210-40a1-a035-64b6d7c818db")
-		(property "Reference" "D2"
-			(at 138.43 170.4974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Value" "LED"
-			(at 138.43 173.0374 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 134.62 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 134.62 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 134.62 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 134.62 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d3b2a4a3-8c20-4516-805b-6627f046536b")
-		)
-		(pin "1"
-			(uuid "3f5f4655-5e18-486f-9ef7-ee75ab536740")
-		)
-		(instances
-			(project ""
-				(path "/43583bed-eccb-4d2c-8df6-db17525cdd0e"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Motor:Motor_DC")
 		(at 171.45 78.74 0)
 		(unit 1)
@@ -4894,6 +4748,86 @@
 			(project ""
 				(path "/43583bed-eccb-4d2c-8df6-db17525cdd0e"
 					(reference "M2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 134.62 160.02 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8c7850b6-da8d-4c33-b8af-2c3076291fae")
+		(property "Reference" "D3"
+			(at 138.43 160.3374 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Value" "LED"
+			(at 138.43 162.8774 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 134.62 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 134.62 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 134.62 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 134.62 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6edb8aea-608b-4bb8-b662-31808681a454")
+		)
+		(pin "1"
+			(uuid "6308a382-d080-4150-96bd-2405ebcc77f9")
+		)
+		(instances
+			(project "shema"
+				(path "/43583bed-eccb-4d2c-8df6-db17525cdd0e"
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -5492,6 +5426,72 @@
 			(project "shema"
 				(path "/43583bed-eccb-4d2c-8df6-db17525cdd0e"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 134.62 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5229a62-361c-49d4-a953-f2a3c658dd11")
+		(property "Reference" "#PWR02"
+			(at 134.62 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 134.62 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 134.62 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 134.62 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2533950e-6679-4ba4-b6ce-ef8ad49646a9")
+		)
+		(instances
+			(project ""
+				(path "/43583bed-eccb-4d2c-8df6-db17525cdd0e"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
